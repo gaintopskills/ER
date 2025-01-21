@@ -5,11 +5,11 @@ import feature2 from "../assets/images/feature2.jpg";
 import feature3 from "../assets/images/feature3.jpg";
 import feature4 from "../assets/images/feature4.jpg";
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
-
+import React from 'react';
 export const Features1 = () => {
   return (
     <section
-      className="w-full bg-bgDark2 pt-24 -mt-8  mb-8 sm:-mt-8 sm:mb-24 xl:-mt-8 2xl:mt-0    md:pt-[12vw] lg:pt-16"
+      className="w-full bg-black pt-24 -mt-8  mb-8 sm:-mt-8 sm:mb-24 xl:-mt-8 2xl:mt-0    md:pt-[12vw] lg:pt-16"
       id="features"
     >
       <motion.div
@@ -89,3 +89,5 @@ export const Features1 = () => {
     </section>
   );
 };
+
+

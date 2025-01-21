@@ -1,78 +1,65 @@
 import { motion } from "framer-motion";
-
-import { QuoteIcon } from "../assets/icons/QuoteIcon";
-import testimonial1 from "../assets/images/testimonial1.png";
-import testimonial2 from "../assets/images/testimonial2.png";
-import testimonial3 from "../assets/images/testimonial3.png";
+import testimonial1 from "../assets/images/high-end-embroidery-patches-los-angeles.webp";
+import testimonial2 from "../assets/images/high-volume-patches-los-angeles.webp";
+import testimonial3 from "../assets/images/fashion-embroidery-patches-los-angeles-1.webp";
 
 const testimonialsData = [
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    heading: "Unlimited Potential",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "Our core embellishment techniques, in one house, can be combined to create stunning results!",
     image: testimonial1,
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    heading: "High Quality",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "With over 30 years of experience in the fashion industry, we are ready to take on any project that you can imagine.",
     image: testimonial2,
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    heading: "High Volume",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "From simple samples to full-fledged production of 15,000 + units.",
     image: testimonial3,
   },
 ];
 
 export const Testimonials = () => (
-  <section className="w-full flex justify-center pt-16 mb-16 lg:mb-32 bg-bgDark2 relative">
+  <section className="w-full flex justify-center pt-10 mb-10 lg:pt-16 lg:mb-32 bg-black relative">
     <div className="absolute -top-16" id="feedback" />
-    <div className="flex flex-col w-full lg:w-[1150px] justify-center">
+    <div className="flex flex-col w-full lg:w-[1150px] justify-center px-4 sm:px-6 md:px-8">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay: 0.3 }}
       >
-        <div className="block-subtitle text-center mb-6">Testimonials</div>
-        <div className="block-big-title text-center mb-20 px-8 sm:px-24 md:px-48">
-          People like you love Tailcast
-        </div>
-
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 xl:gap-10 px-6 xl:px-0 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-10">
           {testimonialsData.map((testimonial, index) => (
             <div
-              className="w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3 main-border-gray-darker rounded-xl bg-bgDark3 flex flex-col px-6 py-4"
-              key={`${testimonial.customerName}-${index}`}
+              className="main-border-gray-darker rounded-xl bg-black flex flex-col px-4 py-6 md:px-6 md:py-8 items-center text-center h-full shadow-md"
+              key={`${testimonial.heading}-${index}`}
             >
-              <div className="flex mb-2">
-                <QuoteIcon />
+              {/* Render image above heading */}
+              <div className="flex justify-center mb-3 md:mb-4">
+                <img
+                  src={testimonial.image.src}
+                  alt="Customer avatar"
+                  className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full object-cover"
+                  aria-label={testimonial.heading}
+                  loading="lazy"
+                />
               </div>
-              <div className="content-text-white">"{testimonial.content}"</div>
-              <div className="flex mt-4 mb-2 xl:mt-8 xl:mb-4">
-                <div>
-                  <img
-                    src={testimonial.image.src}
-                    alt="Customer avatar"
-                    width="45px"
-                    height="5px"
-                    aria-label={testimonial.customerName}
-                  />
-                </div>
-                <div className="flex flex-col ml-4">
-                  <div className="content-text-white font-medium">
-                    {testimonial.customerName}
-                  </div>
-                  <div className="content-text-gray">
-                    {testimonial.customerTitle}
-                  </div>
-                </div>
-              </div>
+
+              {/* Render dynamic heading */}
+              <h2 className="text-white text-lg sm:text-xl md:text-base font-bold mb-3 md:mb-4">
+                {testimonial.heading}
+              </h2>
+
+              {/* Center content */}
+              <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed px-2 sm:px-4">
+                {testimonial.content}
+              </p>
             </div>
           ))}
         </div>

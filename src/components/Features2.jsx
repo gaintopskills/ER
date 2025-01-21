@@ -1,62 +1,91 @@
 import { motion } from "framer-motion";
 
-import feature5 from "../assets/images/feature5.jpg";
-import feature6 from "../assets/images/feature6.jpg";
-import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
-
 export const Features2 = () => (
-  <section className="w-full bg-bgDark2 mt-12 sm:mt-24 mb-12 lg:my-20 lg:mb-24 pt-4">
+  <section className="w-full bg-black mt-12 sm:mt-24 mb-12 lg:my-20 lg:mb-24 pt-4">
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-16">
-        <div className="w-11/12 sm:w-3/4 mx-auto lg:w-1/2 flex flex-wrap lg:-mx-4 sm:pr-8 justify-center order-last lg:order-first">
-          <div className="mb-8 lg:mb-0 w-full px-2 lg:pl-16 flex flex-col justify-center md:pl-8">
-            <div className="mb-4 py-3 md:pl-3 md:pr-20 lg:pr-12 rounded">
-              <img
-                src={feature5.src}
-                alt="Feature image 5"
-                className="rounded-xl  main-border-gray"
-              />
-            </div>
-            <div className="py-3 md:pl-20 lg:pl-12 md:pr-2 rounded ">
-              <img
-                src={feature6.src}
-                alt="Feature image 6"
-                className="rounded-xl  main-border-gray"
-              />
-            </div>
+      <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Column 1 */}
+        <div className="space-y-12">
+          {/* Section 1 */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left bg-gray-800 p-6 rounded-md min-h-[350px]">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">Embroidery</h2>
+            <img
+              src="https://via.placeholder.com/300"
+              alt="Embroidery"
+              className="w-full max-w-xs rounded-md mb-4"
+            />
+            <p className="text-secondaryText leading-loose">
+              High-end embroidery services for custom apparel, uniforms, and promotional products. Perfect for a high-quality finish on your garments.
+            </p>
+          </div>
+          {/* Section 2 */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left bg-gray-800 p-6 rounded-md min-h-[350px]">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">Screen Printing</h2>
+            <img
+              src="https://via.placeholder.com/300"
+              alt="Screen Printing"
+              className="w-full max-w-xs rounded-md mb-4"
+            />
+            <p className="text-secondaryText leading-loose">
+              Expert screen printing services for bold, long-lasting designs on apparel and promotional products.
+            </p>
+          </div>
+          {/* Section 3 */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left bg-gray-800 p-6 rounded-md min-h-[350px]">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">DTG Printing</h2>
+            <img
+              src="https://via.placeholder.com/300"
+              alt="DTG Printing"
+              className="w-full max-w-xs rounded-md mb-4"
+            />
+            <p className="text-secondaryText leading-loose">
+              Precision DTG printing for custom clothing brands, fashion events, and promotional products.
+            </p>
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 mb-12 lg:mb-0 xl:pl-8">
-          <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
-            <span className="block-subtitle">Make Data-Driven Decisions</span>
-            <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-              Issue tracking you’ll enjoy using
-            </h2>
-            <p className="mb-12 text-secondaryText leading-loose">
-              Monitor and track data issues with ease using our intuitive and
-              efficient issue tracking system. Stay ahead of potential problems
-              and improve your workflow.
+        {/* Column 2 */}
+        <div className="space-y-12">
+          {/* Section 4 */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left bg-gray-800 p-6 rounded-md min-h-[350px]">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">Cut & Sew</h2>
+            <img
+              src="https://via.placeholder.com/300"
+              alt="Cut & Sew"
+              className="w-full max-w-xs rounded-md mb-4"
+            />
+            <p className="text-secondaryText leading-loose">
+              Professional cut-and-sew services to bring your creative vision to life with precision and style.
             </p>
-            <ul className="mb-6 text-primaryText">
-              <li className="mb-4 flex">
-                <CheckArrowIcon />
-                <span>Collaborative environment</span>
-              </li>
-              <li className="mb-4 flex">
-                <CheckArrowIcon />
-                <span>Smart issue categorization</span>
-              </li>
-              <li className="mb-4 flex">
-                <CheckArrowIcon />
-                <span>Customizable notifications</span>
-              </li>
-            </ul>
+          </div>
+          {/* Section 5 */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left bg-gray-800 p-6 rounded-md min-h-[350px]">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">Blank Apparel</h2>
+            <img
+              src="https://via.placeholder.com/300"
+              alt="Blank Apparel"
+              className="w-full max-w-xs rounded-md mb-4"
+            />
+            <p className="text-secondaryText leading-loose">
+              High-quality blank apparel for screen printing, embroidery, and DTG printing projects.
+            </p>
+          </div>
+          {/* Section 6 */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left bg-gray-800 p-6 rounded-md min-h-[350px]">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-white">Branding Solutions</h2>
+            <img
+              src="https://via.placeholder.com/300"
+              alt="Branding Solutions"
+              className="w-full max-w-xs rounded-md mb-4"
+            />
+            <p className="text-secondaryText leading-loose">
+              Comprehensive branding solutions for custom merchandise and apparel.
+            </p>
           </div>
         </div>
       </div>
